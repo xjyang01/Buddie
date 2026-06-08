@@ -7,6 +7,12 @@ const GROUPS = [
     title: "Montrealers",
     description: "Connect with people living and loving Montreal",
   },
+  {
+    href: "/people/torontonians",
+    emoji: "🏙️",
+    title: "Torontonians",
+    description: "Connect with people living and loving Toronto",
+  },
 ];
 
 export default function PeoplePage() {
