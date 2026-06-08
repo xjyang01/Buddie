@@ -1,13 +1,14 @@
 "use client";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Home, Compass, Bell, User, Plus, MessageCircle, Search, MapPin } from "lucide-react";
+import { Home, Compass, Bell, User, Plus, MessageCircle, Search, MapPin, Snowflake } from "lucide-react";
 import { useState } from "react";
 
 const links = [
   { href: "/", icon: Home, label: "Home" },
   { href: "/discover", icon: Compass, label: "Discover" },
   { href: "/nearby", icon: MapPin, label: "Near Me" },
+  { href: "/montrealers", icon: Snowflake, label: "Montrealers" },
   { href: "/messages", icon: MessageCircle, label: "Messages" },
   { href: "/notifications", icon: Bell, label: "Notifications" },
   { href: "/profile", icon: User, label: "Profile" },
