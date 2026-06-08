@@ -6,11 +6,11 @@ import Navbar from "@/components/Navbar";
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Buddie — Find Your People",
+  title: "Buddie — Find Buddies and Find Life",
   description: "Buddie is a warm community to make real friends around shared interests. Discover people nearby, share what you love, and connect.",
   keywords: ["make friends", "friend finder", "community", "social", "meet people", "local friends"],
   openGraph: {
-    title: "Buddie — Find Your People",
+    title: "Buddie — Find Buddies and Find Life",
     description: "Discover people nearby who share your interests. Make real friends on Buddie.",
     url: "https://buddie-fod2r3dfd-xjyang01s-projects.vercel.app",
     siteName: "Buddie",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Buddie — Find Your People",
+    title: "Buddie — Find Buddies and Find Life",
     description: "Discover people nearby who share your interests. Make real friends on Buddie.",
   },
   robots: {
