@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Home, Compass, Bell, User, Plus, MessageCircle, Search, MapPin, Snowflake } from "lucide-react";
+import { Home, Compass, Bell, User, Plus, MessageCircle, Search, MapPin, Snowflake, Briefcase, FlaskConical, HeartPulse, Clapperboard } from "lucide-react";
 import { useState } from "react";
 
 const links = [
@@ -9,6 +9,10 @@ const links = [
   { href: "/discover", icon: Compass, label: "Discover" },
   { href: "/nearby", icon: MapPin, label: "Near Me" },
   { href: "/people", icon: Snowflake, label: "People" },
+  { href: "/jobs", icon: Briefcase, label: "Jobs" },
+  { href: "/science", icon: FlaskConical, label: "Science" },
+  { href: "/health", icon: HeartPulse, label: "Health" },
+  { href: "/entertainment", icon: Clapperboard, label: "Entertainment" },
   { href: "/messages", icon: MessageCircle, label: "Messages" },
   { href: "/notifications", icon: Bell, label: "Notifications" },
   { href: "/profile", icon: User, label: "Profile" },
