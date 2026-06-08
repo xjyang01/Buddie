@@ -7,7 +7,7 @@ export default function Home() {
         style={{ background: "linear-gradient(135deg, #fed7aa, #fef3c7)" }}
       >
         <h1 className="text-3xl font-bold mb-4" style={{ color: "var(--foreground)" }}>
-          Welcome to Buddie 🌻
+          Find Buddie, Find Life! 🌻
         </h1>
         <p className="text-base leading-relaxed max-w-xl mx-auto" style={{ color: "#92400e" }}>
           Hopefully, Buddie will make you smart, successful and happy.
