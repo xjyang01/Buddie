@@ -61,16 +61,25 @@ export default function SciencePage() {
       {/* Sub-categories */}
       <div className="mb-6">
         <h2 className="text-sm font-semibold uppercase tracking-wide mb-3" style={{ color: "#9ca3af" }}>Sub-fields</h2>
-        <Link
-          href="/science/biomedical"
-          className="card p-4 flex items-center gap-4 hover:shadow-md transition-shadow"
-        >
-          <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0" style={{ background: "var(--muted)" }}>
-            🧬
-          </div>
+        <Link href="/science/biomedical" className="card p-4 flex items-center gap-4 hover:shadow-md transition-shadow">
+          <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0" style={{ background: "var(--muted)" }}>🧬</div>
           <div>
             <p className="font-semibold">Biomedical Science</p>
             <p className="text-sm" style={{ color: "#6b7280" }}>Research news in medicine, genetics, and molecular biology</p>
+          </div>
+        </Link>
+        <Link href="/science/ai" className="card p-4 flex items-center gap-4 hover:shadow-md transition-shadow">
+          <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0" style={{ background: "var(--muted)" }}>🤖</div>
+          <div>
+            <p className="font-semibold">Artificial Intelligence</p>
+            <p className="text-sm" style={{ color: "#6b7280" }}>Research news in machine learning, AI systems, and intelligent computing</p>
+          </div>
+        </Link>
+        <Link href="/science/physics" className="card p-4 flex items-center gap-4 hover:shadow-md transition-shadow">
+          <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0" style={{ background: "var(--muted)" }}>⚛️</div>
+          <div>
+            <p className="font-semibold">Physics</p>
+            <p className="text-sm" style={{ color: "#6b7280" }}>Research news in particle physics, quantum mechanics, and beyond</p>
           </div>
         </Link>
       </div>
