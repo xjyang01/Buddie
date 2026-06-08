@@ -13,6 +13,20 @@ type NewsReport = {
 
 const REPORTS: NewsReport[] = [
   {
+    id: "bm3",
+    headline: "Single-Cell Mapping of Regulatory DNA–Protein Interactions Unveiled",
+    citation: "Chi WY, Yoon SH, Goksel E, Mekerishvili L, Pelt J, Lin Y, Prieto T, Zinno J, Ganesan S, Potenski C, Izzo F, Landau DA, Raimondi I. Single-cell mapping of regulatory DNA-protein interactions.",
+    doi: "",
+    tags: ["single-cell", "chromatin", "epigenomics", "regulatory DNA", "protein interactions"],
+    report: `Understanding how proteins interact with regulatory DNA at the single-cell level is one of the most pressing challenges in modern genomics. Regulatory elements — enhancers, promoters, and insulators — do not act in isolation; they are bound and modulated by a constellation of transcription factors and chromatin-associated proteins whose occupancy varies from cell to cell, even within a seemingly homogeneous population.
+
+A new study from researchers at the New York Genome Center, led by Dan A. Landau and Ivan Raimondi, introduces a method for mapping these regulatory DNA–protein interactions at single-cell resolution. By profiling which proteins occupy specific genomic loci on a cell-by-cell basis, the approach captures the heterogeneity in regulatory state that bulk assays inevitably average away.
+
+The work builds on the growing toolkit of single-cell epigenomics — which already includes methods for mapping open chromatin (scATAC-seq) and histone modifications — but pushes further by directly resolving protein occupancy at regulatory sites. This level of resolution is critical for dissecting how gene expression programs diverge across cell types, developmental stages, and disease states.
+
+The implications for cancer biology are particularly significant. Tumour cell populations are notoriously heterogeneous, and regulatory rewiring — rather than coding mutation — is increasingly recognized as a driver of therapy resistance and clonal evolution. A tool that maps regulatory protein interactions at single-cell resolution offers a new lens through which to study these dynamics and identify vulnerabilities that bulk profiling would miss.`,
+  },
+  {
     id: "bm1",
     headline: "New Protocol Achieves Near-Perfect Efficiency in Site-Directed Mutagenesis",
     citation: "Yang XJ. Curr Protoc. 2026 Jan;6(1):e70303. doi: 10.1002/cpz1.70303. PMID: 41543491. Free PMC article.",
