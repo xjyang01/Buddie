@@ -7,7 +7,24 @@ const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Buddie — Find Your People",
-  description: "A warm community to make real friends around shared interests.",
+  description: "Buddie is a warm community to make real friends around shared interests. Discover people nearby, share what you love, and connect.",
+  keywords: ["make friends", "friend finder", "community", "social", "meet people", "local friends"],
+  openGraph: {
+    title: "Buddie — Find Your People",
+    description: "Discover people nearby who share your interests. Make real friends on Buddie.",
+    url: "https://buddie-fod2r3dfd-xjyang01s-projects.vercel.app",
+    siteName: "Buddie",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Buddie — Find Your People",
+    description: "Discover people nearby who share your interests. Make real friends on Buddie.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
