@@ -13,7 +13,7 @@ const links = [
   { href: "/entertainment", icon: Clapperboard, label: "Entertainment" },
   { href: "/travel", icon: Plane, label: "Travel" },
   { href: "/people", icon: Snowflake, label: "People" },
-  { href: "/messages", icon: MessageCircle, label: "Messages" },
+  { href: "/donation", icon: MessageCircle, label: "Donate to Research" },
   { href: "/profile", icon: User, label: "Profile" },
 ];
 
