@@ -34,6 +34,29 @@ export const MONEY_NEWS: NewsItem[] = [
     ],
   },
   {
+    id: "li-ka-shing-autobiography",
+    emoji: "📖",
+    category: "People & Wealth",
+    title: "Ka-Shing Li is promoting his autobiography in Chinese social media",
+    summary:
+      "Sir Ka-Shing Li, one of the richest men in Asia, is promoting his new autobiography 'I am not a superman' — a story of hardship, resilience, and extraordinary success that has gone viral on Weibo.",
+    date: "June 9, 2026",
+    readTime: "3 min read",
+    body: [
+      "Sir Ka-Shing Li, one of the wealthiest and most admired businessmen in Asia, is currently promoting his new autobiography titled 'I am not a superman' across Chinese social media platforms. His short videos have become a sensation on Weibo — known in English-speaking markets as a Chinese equivalent to Twitter/X — and have also spread widely on WeChat, China's dominant messaging and social platform.",
+
+      "In his book, Sir Ka-Shing Li details with remarkable candor how the hardships of his childhood and early adult years shaped his character, values, and ultimately his career. Born into modest circumstances, he lost his father at a young age and was forced to leave school to support his family. These formative struggles, he argues, were not obstacles to success — they were the foundation of it.",
+
+      "His life story has resonated deeply with millions of Chinese nationals, many of whom see in him a model of perseverance, humility, and long-term thinking. At a time when many young people across Hong Kong, mainland China, and the broader Chinese diaspora grapple with economic uncertainty, Li's message — that adversity builds character — has struck a powerful chord.",
+
+      "Sir Ka-Shing Li was born in Chaozhou, Guangdong Province, China in 1928, making him 98 years old by Western reckoning. However, according to traditional Chinese customs of age counting, he is considered 99 years old. He will soon become a centenarian — a milestone that adds yet another dimension to his already extraordinary legacy.",
+
+      "His longevity is itself a subject of fascination. In his videos, he appears sharp, thoughtful, and full of wisdom — attributes that have led many viewers to describe him as one of the wisest men alive. He speaks not only about business, but about life philosophy, family, and the importance of giving back to society. His charitable foundation has donated billions of dollars to education and healthcare causes.",
+
+      "Sir Ka-Shing Li built his fortune through Cheung Kong Holdings and Hutchison Whampoa, with business interests spanning ports, retail, telecommunications, energy, and real estate across more than 50 countries. His net worth has consistently placed him among the top ten wealthiest individuals in Asia. Yet it is his humility — captured in the very title of his autobiography — that seems to have made the deepest impression on his audience. 'I am not a superman' is, in many ways, the most powerful thing one of Asia's greatest businessmen could say.",
+    ],
+  },
+  {
     id: "openai-ipo",
     emoji: "💡",
     category: "IPO",
