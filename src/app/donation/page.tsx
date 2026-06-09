@@ -71,13 +71,13 @@ export default function DonationPage() {
               scientific discoveries into real clinical benefits for patients.
             </p>
             <a
-              href="https://www.mcgill.ca/goodman"
+              href="https://www.goodmancancer.ca/en/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-sm font-medium hover:underline"
               style={{ color: "var(--primary)" }}
             >
-              Visit mcgill.ca/goodman <ExternalLink size={13} />
+              Visit goodmancancer.ca <ExternalLink size={13} />
             </a>
           </div>
         </div>
