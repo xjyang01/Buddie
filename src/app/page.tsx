@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { MONEY_NEWS } from "@/lib/money";
 
-// Ka-Shing Li first, then DeepSeek, then Anthropic, then OpenAI
 const HOME_NEWS = [
-  MONEY_NEWS.find((n) => n.id === "li-ka-shing-autobiography")!,
-  MONEY_NEWS.find((n) => n.id === "deepseek-funding")!,
-  MONEY_NEWS.find((n) => n.id === "anthropic-ipo")!,
   MONEY_NEWS.find((n) => n.id === "openai-ipo")!,
+  MONEY_NEWS.find((n) => n.id === "anthropic-ipo")!,
+  MONEY_NEWS.find((n) => n.id === "deepseek-funding")!,
+  MONEY_NEWS.find((n) => n.id === "li-ka-shing-autobiography")!,
 ];
 
 export default function Home() {
