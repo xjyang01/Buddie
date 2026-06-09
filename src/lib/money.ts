@@ -34,6 +34,27 @@ export const MONEY_NEWS: NewsItem[] = [
     ],
   },
   {
+    id: "deepseek-funding",
+    emoji: "🇨🇳",
+    category: "AI & Markets",
+    title: "DeepSeek Set to Raise $7.5 Billion as Chinese AI Rival Reshapes Global Markets",
+    summary:
+      "DeepSeek, the Chinese AI giant that shocked global markets in January 2025, is set to raise approximately $7.5 billion — cementing China's place at the frontier of artificial intelligence.",
+    date: "June 9, 2026",
+    readTime: "3 min read",
+    body: [
+      "DeepSeek, the Chinese AI giant, is set to raise approximately $7.5 billion in a new funding round — a move that underscores China's growing ambitions in the global artificial intelligence race.",
+
+      "The company first captured the world's attention in January 2025, when the release of its high-performance AI model caught investors and technologists by surprise. Global markets reacted swiftly: tech stocks tumbled as investors reassessed the assumption that only a handful of well-funded Western companies could build frontier AI systems.",
+
+      "DeepSeek was founded by Liang Wenfeng, a graduate of Zhejiang University in Hangzhou, China. At just 41 years old, he is now widely regarded as one of the richest men in China. Born and raised in a small village in Guangdong — the southern province bordering Hong Kong — he earned both his undergraduate and graduate degrees before embarking on a remarkable entrepreneurial journey.",
+
+      "After graduating, Liang Wenfeng applied AI techniques to quantitative trading, building algorithmic systems that generated a substantial fortune. In 2021, he began acquiring Nvidia GPUs at scale to construct AI computing infrastructure for his trading operations. By 2023, he had pivoted that infrastructure toward a far more ambitious goal, launching the DeepSeek project.",
+
+      "It is a testament to vision, timing, and execution that a young graduate from a small Guangdong village — armed with deep technical knowledge and a willingness to take bold risks — has built a company that shook global financial markets and forced the world to take Chinese AI seriously.",
+    ],
+  },
+  {
     id: "li-ka-shing-autobiography",
     emoji: "📖",
     category: "People & Wealth",
