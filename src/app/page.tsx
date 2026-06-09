@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { MONEY_NEWS } from "@/lib/money";
 
+// Ka-Shing Li first, then Anthropic, then OpenAI
+const HOME_NEWS = [
+  MONEY_NEWS.find((n) => n.id === "li-ka-shing-autobiography")!,
+  MONEY_NEWS.find((n) => n.id === "anthropic-ipo")!,
+  MONEY_NEWS.find((n) => n.id === "openai-ipo")!,
+];
+
 export default function Home() {
   return (
     <div className="flex flex-col gap-8">
@@ -17,18 +24,16 @@ export default function Home() {
         </p>
       </div>
 
-      {/* Money News */}
+      {/* News */}
       <div>
         <div className="flex items-center justify-between mb-3">
-          <h2 className="text-lg font-bold flex items-center gap-2">
-            💰 Money
-          </h2>
+          <h2 className="text-lg font-bold">Latest News</h2>
           <Link href="/money" className="text-sm font-medium" style={{ color: "var(--primary)" }}>
             See all →
           </Link>
         </div>
         <div className="flex flex-col gap-3">
-          {MONEY_NEWS.map((item) => (
+          {HOME_NEWS.map((item) => (
             <Link key={item.id} href={`/money/${item.id}`}>
               <div className="card p-4 flex items-start gap-4 hover:shadow-md transition-shadow cursor-pointer">
                 <div
