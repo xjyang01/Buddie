@@ -3,9 +3,9 @@ import Link from "next/link";
 export default function SciencePage() {
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-1">Science 🔬</h1>
+      <h1 className="text-2xl font-bold mb-1">Science & Technology 🔬</h1>
       <p className="text-sm mb-6" style={{ color: "#9ca3af" }}>
-        Explore research and discoveries across scientific fields
+        Explore research, discoveries, and technology news
       </p>
 
       <div className="flex flex-col gap-3">

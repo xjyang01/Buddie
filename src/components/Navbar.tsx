@@ -5,7 +5,7 @@ import { User, Plus, MessageCircle, Search, Snowflake, Briefcase, FlaskConical, 
 import { useState } from "react";
 
 const links = [
-  { href: "/science", icon: FlaskConical, label: "Science" },
+  { href: "/science", icon: FlaskConical, label: "Science & Tech" },
   { href: "/health", icon: HeartPulse, label: "Health" },
   { href: "/education", icon: GraduationCap, label: "Education" },
   { href: "/jobs", icon: Briefcase, label: "Jobs" },
