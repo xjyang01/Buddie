@@ -11,6 +11,60 @@ export type NewsItem = {
 
 export const MONEY_NEWS: NewsItem[] = [
   {
+    id: "abridge-nvidia",
+    emoji: "🏥",
+    category: "AI & Health",
+    title: "Abridge Partners with NVIDIA, Expands Beyond Clinical Documentation",
+    summary:
+      "Abridge, the AI-powered medical scribe backed by $250 million in funding, is deepening its partnership with NVIDIA and moving into clinical decision support — signalling a new phase for AI in medicine.",
+    date: "June 14, 2026",
+    readTime: "5 min read",
+    body: [
+      "Abridge, the Pittsburgh-based health AI company founded in 2018, has announced a deepened strategic partnership with NVIDIA that will accelerate its expansion beyond clinical documentation into real-time clinical decision support, care gap detection, and population health analytics. The deal marks a pivotal moment in the company's evolution — and in the broader trajectory of AI in healthcare.",
+
+      "Abridge built its reputation on a single, high-value problem: the documentation burden on physicians. Doctors in the United States spend an estimated two hours on paperwork for every one hour they spend with patients — a crisis that contributes directly to physician burnout, reduced patient throughput, and lower quality of care. Abridge's ambient AI listens to patient-physician conversations in real time and automatically generates structured clinical notes, saving physicians an average of two to three hours per day.",
+
+      "The company's technology is built on a foundation of medical-grade large language models trained specifically on clinical language — a distinct advantage over general-purpose AI tools applied to healthcare settings. Its models are trained to understand the nuanced, abbreviated, and often non-standard language that clinicians use, and to structure that language into the precise format required by electronic health record (EHR) systems such as Epic.",
+
+      "The NVIDIA partnership brings substantial hardware and software infrastructure to bear on Abridge's next chapter. Through NVIDIA's DGX Cloud platform and BioNeMo framework — which specializes in life-science AI model development — Abridge will accelerate training of new clinical models and deploy inference at scale across health system partners. NVIDIA's investment in Abridge signals its conviction that healthcare AI is one of the highest-value applications of its GPU infrastructure.",
+
+      "The expansion into clinical decision support is where the story becomes genuinely transformative. Rather than simply transcribing and structuring what a physician says, Abridge's next-generation system will surface relevant clinical guidelines, flag potential drug interactions, identify care gaps based on patient history, and prompt clinicians with evidence-based recommendations — all in real time, embedded directly into the clinical workflow. This is AI functioning not as a scribe, but as a genuine cognitive partner for the physician.",
+
+      "Abridge has raised approximately $250 million to date, with investors including UPMC Enterprises, Spark Capital, Bessemer Venture Partners, and CVS Health Ventures. Its health system partners now include some of the largest hospital networks in the United States, covering tens of thousands of physicians and millions of patient encounters annually.",
+
+      "The commercial opportunity is enormous. The global healthcare AI market is projected to exceed $150 billion by 2030, with clinical documentation and decision support representing two of its largest and most immediately addressable segments. Abridge is well-positioned to capture a significant share of this market, with first-mover advantages in ambient clinical AI and deep integrations with Epic — the EHR system used by the majority of U.S. health systems.",
+
+      "For investors and observers watching the intersection of AI and medicine, Abridge's trajectory is a case study in how focused, domain-specific AI companies can create durable competitive advantages. By solving a genuine, urgent pain point for clinicians — and solving it well — Abridge has built the trust and workflow integration that is extraordinarily difficult for later entrants to replicate. The NVIDIA partnership suggests the company is now ready to move from solving documentation to shaping the future of clinical care itself.",
+    ],
+  },
+  {
+    id: "spacex-ipo",
+    emoji: "🚀",
+    category: "IPO",
+    title: "SpaceX IPO: The Most Anticipated Listing in a Generation",
+    summary:
+      "Elon Musk's SpaceX is weighing a potential public offering that could value the company at over $350 billion — making it the largest tech IPO in history if it proceeds.",
+    date: "June 13, 2026",
+    readTime: "5 min read",
+    body: [
+      "SpaceX, the private aerospace company founded by Elon Musk in 2002, is reportedly exploring a path to public markets that could result in the largest technology IPO in history. The company's valuation in private secondary markets has surged past $350 billion, driven by its dominance in commercial launch services, the rapid expansion of its Starlink satellite internet business, and ambitious plans for human Mars colonization.",
+
+      "SpaceX is not a typical tech company. It manufactures and launches rockets, operates the world's largest commercial satellite constellation, and holds long-term contracts with NASA and the U.S. Department of Defense. Its Falcon 9 rocket is the most-launched orbital rocket in history, and the Starship system — the largest and most powerful rocket ever built — is central to NASA's Artemis lunar program and SpaceX's own interplanetary ambitions.",
+
+      "The financial engine driving IPO speculation is Starlink. SpaceX's satellite internet service, which now serves over 5 million subscribers in more than 100 countries, is on track to generate over $10 billion in annual revenue. For many remote communities, rural households, and maritime operators, Starlink has become the only viable high-speed internet option. The business is growing rapidly and has recently turned cash-flow positive — a key milestone for any pre-IPO company.",
+
+      "Elon Musk has historically resisted taking SpaceX public, arguing that the company's long-term mission — the colonization of Mars — requires a level of capital investment and risk tolerance incompatible with quarterly earnings pressure from public shareholders. He has repeatedly stated that he does not want SpaceX to face the same short-term market dynamics that complicated Tesla's early years.",
+
+      "However, investor pressure and the company's growing capital needs may be shifting that calculus. Developing Starship at scale, building out the Starlink constellation to tens of thousands of satellites, and funding early Mars missions require hundreds of billions of dollars over the coming decades. A public listing would give SpaceX access to the deepest capital markets in the world.",
+
+      "A partial IPO — listing only the Starlink subsidiary while keeping the rocket and spacecraft division private — has been widely discussed as a middle path. This structure would allow SpaceX to raise capital from public markets through Starlink's predictable subscription revenues, while shielding the more speculative, long-duration bets (Mars, Starship) from short-term investor scrutiny.",
+
+      "For retail investors, a SpaceX or Starlink IPO would represent a once-in-a-generation opportunity to invest in what may be the defining technology company of the 21st century. But the risks are substantial: heavy capital expenditure, regulatory complexity across dozens of countries, geopolitical exposure, and the singular dependence on Elon Musk as a visionary leader — and the volatility that follows him — must all be carefully weighed.",
+
+      "No official timeline has been announced. SpaceX has declined all public comment on IPO speculation. But Wall Street bankers, venture capitalists, and retail investors are watching closely. If and when SpaceX goes public, it will be a defining moment not just for the space industry, but for the future of human civilization.",
+    ],
+  },
+  {
     id: "anthropic-ipo",
     emoji: "🤖",
     category: "IPO",
