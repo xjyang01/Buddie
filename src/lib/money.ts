@@ -11,6 +11,35 @@ export type NewsItem = {
 
 export const MONEY_NEWS: NewsItem[] = [
   {
+    id: "spacex-cursor",
+    emoji: "🛸",
+    category: "Acquisition",
+    title: "SpaceX Acquires Cursor in $60 Billion Deal, Merging Space and AI",
+    summary:
+      "In a stunning cross-industry move, SpaceX has announced the acquisition of Cursor — the AI-powered coding assistant — valuing the company at $60 billion and signalling Elon Musk's ambition to build a vertically integrated AI and space empire.",
+    date: "June 16, 2026",
+    readTime: "5 min read",
+    body: [
+      "On June 16, 2026, SpaceX announced the acquisition of Cursor, the AI-powered coding assistant developed by Anysphere, in a deal that values the company at $60 billion. The announcement sent shockwaves through the technology world — not just for its staggering price tag, but for what it signals about Elon Musk's increasingly ambitious vision for SpaceX as a vertically integrated technology empire that extends far beyond rockets and satellites.",
+
+      "Cursor has rapidly become the tool of choice for software engineers worldwide. Built on top of frontier large language models — including Claude and GPT-4 — Cursor integrates AI assistance directly into a Visual Studio Code-based editor, enabling developers to write, refactor, debug, and understand code with unprecedented speed. Within just two years of its public launch, Cursor amassed millions of active users and became the fastest-adopted developer tool in Silicon Valley history, with reported annual recurring revenue crossing $500 million in early 2026.",
+
+      "The $60 billion valuation is extraordinary by any measure, making this one of the largest acquisitions in the history of the software industry. For context, it exceeds the acquisition prices paid for LinkedIn ($26B), GitHub ($7.5B), and Slack ($27B) — and Cursor is a fraction of the age of any of those companies. The price reflects not just Cursor's current revenue, but the strategic premium SpaceX is willing to pay for controlling a dominant position in the AI developer tools market.",
+
+      "Why would a rocket company acquire a coding assistant? The answer, analysts suggest, lies in SpaceX's increasingly acute software demands. Developing and operating Starship — the most complex rocket ever built — requires an enormous engineering workforce writing millions of lines of code across avionics, guidance systems, propulsion control, ground operations, and satellite constellation management. Starlink alone runs on software infrastructure comparable in scale to a major cloud platform. Owning the best AI coding tool in the world gives SpaceX a permanent, compounding advantage in software engineering productivity.",
+
+      "Beyond internal use, the acquisition positions SpaceX to commercialize Cursor across the enterprise software market — a sector worth hundreds of billions of dollars annually. Under SpaceX ownership, Cursor could be bundled with Starlink's enterprise connectivity offering, creating a powerful suite of productivity tools for businesses operating in remote or underserved locations where Starlink is the primary internet provider.",
+
+      "Elon Musk, in a post on X, described the acquisition as 'bringing the two most transformative technologies of our time — AI and space — under one roof.' He added that Cursor's team would remain in San Francisco and operate with full autonomy, with SpaceX providing compute resources through its growing AI infrastructure division.",
+
+      "Reaction in the developer community has been mixed. Many Cursor users expressed concern about the acquisition, citing Musk's management style at X and Tesla as a source of uncertainty. Others pointed out that SpaceX's engineering culture is widely regarded as one of the most demanding and effective in the world, and that access to SpaceX-scale compute could dramatically accelerate Cursor's model capabilities.",
+
+      "Regulators are expected to scrutinize the deal given SpaceX's growing market power across launch services, satellite internet, and now AI software. Antitrust questions — particularly around bundling Cursor with Starlink enterprise contracts — are likely to feature prominently in any regulatory review. Nevertheless, analysts expect the deal to close before the end of 2026, pending approvals.",
+
+      "For the broader AI industry, the SpaceX-Cursor deal is a landmark moment. It confirms that AI developer tools are now among the most strategically valuable assets in technology — and that the race to own the interface between human intelligence and software is no longer confined to traditional software companies.",
+    ],
+  },
+  {
     id: "abridge-nvidia",
     emoji: "🏥",
     category: "AI & Health",

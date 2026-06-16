@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MONEY_NEWS } from "@/lib/money";
 
 const HOME_NEWS = [
+  MONEY_NEWS.find((n) => n.id === "spacex-cursor")!,
   MONEY_NEWS.find((n) => n.id === "abridge-nvidia")!,
   MONEY_NEWS.find((n) => n.id === "spacex-ipo")!,
   MONEY_NEWS.find((n) => n.id === "openai-ipo")!,
