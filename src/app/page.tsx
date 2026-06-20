@@ -16,6 +16,79 @@ const HOME_NEWS = [
   MONEY_NEWS.find((n) => n.id === 'li-ka-shing-autobiography')!,
 ]
 
+type Post = {
+  id: string
+  content: string
+  tags: string[]
+  created_at: string
+  post_country: string | null
+  post_region: string | null
+  post_city: string | null
+  profiles: { full_name: string; avatar: string } | null
+}
+
+type LocationGroup = {
+  country: string
+  regions: {
+    region: string
+    cities: {
+      city: string
+      posts: Post[]
+    }[]
+  }[]
+}
+
+function groupByLocation(posts: Post[]): { located: LocationGroup[]; unlocated: Post[] } {
+  const unlocated: Post[] = []
+  const map: Record<string, Record<string, Record<string, Post[]>>> = {}
+
+  for (const post of posts) {
+    if (!post.post_country) { unlocated.push(post); continue }
+    const country = post.post_country
+    const region = post.post_region || 'Other'
+    const city = post.post_city || 'Other'
+    map[country] ??= {}
+    map[country][region] ??= {}
+    map[country][region][city] ??= []
+    map[country][region][city].push(post)
+  }
+
+  const located: LocationGroup[] = Object.entries(map).map(([country, regions]) => ({
+    country,
+    regions: Object.entries(regions).map(([region, cities]) => ({
+      region,
+      cities: Object.entries(cities).map(([city, posts]) => ({ city, posts })),
+    })),
+  }))
+
+  return { located, unlocated }
+}
+
+function PostCard({ post }: { post: Post }) {
+  return (
+    <div className="card p-4">
+      <div className="flex items-center gap-2 mb-2">
+        <div className="w-8 h-8 rounded-full flex items-center justify-center text-lg shrink-0"
+          style={{ background: 'var(--muted)' }}>
+          {post.profiles?.avatar || '🌻'}
+        </div>
+        <div>
+          <p className="text-sm font-semibold">{post.profiles?.full_name}</p>
+          <p className="text-xs" style={{ color: '#9ca3af' }}>
+            {formatDistanceToNow(new Date(post.created_at), { addSuffix: true })}
+          </p>
+        </div>
+      </div>
+      <p className="text-sm leading-relaxed mb-2">{post.content}</p>
+      {post.tags?.length > 0 && (
+        <div className="flex flex-wrap gap-1.5">
+          {post.tags.map((t: string) => <TagPill key={t} tag={t} />)}
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default async function Home() {
   const supabase = await createClient()
 
@@ -23,7 +96,9 @@ export default async function Home() {
     .from('posts')
     .select('*, profiles(full_name, avatar)')
     .order('created_at', { ascending: false })
-    .limit(10)
+    .limit(100)
+
+  const { located, unlocated } = groupByLocation((posts ?? []) as Post[])
 
   return (
     <div className="flex flex-col gap-8">
@@ -50,39 +125,76 @@ export default async function Home() {
         </div>
       </div>
 
-      {/* Community Feed */}
-      {posts && posts.length > 0 && (
+      {/* Community Feed — by location */}
+      {(posts && posts.length > 0) && (
         <div>
-          <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center justify-between mb-4">
             <h2 className="text-lg font-bold">Community Feed</h2>
             <Link href="/new" className="text-sm font-medium" style={{ color: 'var(--primary)' }}>
               + Post
             </Link>
           </div>
-          <div className="flex flex-col gap-3">
-            {posts.map((post: any) => (
-              <div key={post.id} className="card p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-8 h-8 rounded-full flex items-center justify-center text-lg shrink-0"
-                    style={{ background: 'var(--muted)' }}>
-                    {post.profiles?.avatar || '🌻'}
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold">{post.profiles?.full_name}</p>
-                    <p className="text-xs" style={{ color: '#9ca3af' }}>
-                      {formatDistanceToNow(new Date(post.created_at), { addSuffix: true })}
-                    </p>
-                  </div>
-                </div>
-                <p className="text-sm leading-relaxed mb-2">{post.content}</p>
-                {post.tags?.length > 0 && (
-                  <div className="flex flex-wrap gap-1.5">
-                    {post.tags.map((t: string) => <TagPill key={t} tag={t} />)}
-                  </div>
-                )}
+
+          {/* Located posts grouped */}
+          {located.map(({ country, regions }) => (
+            <div key={country} className="mb-6">
+              {/* Country header */}
+              <div className="flex items-center gap-2 mb-3">
+                <div className="h-px flex-1" style={{ background: 'var(--border)' }} />
+                <span className="text-xs font-bold uppercase tracking-widest px-2"
+                  style={{ color: 'var(--primary)' }}>
+                  🌍 {country}
+                </span>
+                <div className="h-px flex-1" style={{ background: 'var(--border)' }} />
               </div>
-            ))}
-          </div>
+
+              {regions.map(({ region, cities }) => (
+                <div key={region} className="mb-4 ml-2">
+                  {/* Region header */}
+                  <p className="text-xs font-semibold uppercase tracking-wide mb-2"
+                    style={{ color: '#6b7280' }}>
+                    📍 {region}
+                  </p>
+
+                  {cities.map(({ city, posts: cityPosts }) => (
+                    <div key={city} className="mb-3 ml-3">
+                      {/* City header */}
+                      <p className="text-xs font-medium mb-2 flex items-center gap-1"
+                        style={{ color: '#9ca3af' }}>
+                        🏙 {city}
+                        <span className="ml-1 px-1.5 py-0.5 rounded-full text-xs"
+                          style={{ background: 'var(--muted)', color: '#6b7280' }}>
+                          {cityPosts.length}
+                        </span>
+                      </p>
+                      <div className="flex flex-col gap-3">
+                        {cityPosts.map(post => <PostCard key={post.id} post={post} />)}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          ))}
+
+          {/* Unlocated posts */}
+          {unlocated.length > 0 && (
+            <div className="mb-4">
+              {located.length > 0 && (
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="h-px flex-1" style={{ background: 'var(--border)' }} />
+                  <span className="text-xs font-bold uppercase tracking-widest px-2"
+                    style={{ color: '#9ca3af' }}>
+                    🌐 Worldwide
+                  </span>
+                  <div className="h-px flex-1" style={{ background: 'var(--border)' }} />
+                </div>
+              )}
+              <div className="flex flex-col gap-3">
+                {unlocated.map(post => <PostCard key={post.id} post={post} />)}
+              </div>
+            </div>
+          )}
         </div>
       )}
 

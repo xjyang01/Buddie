@@ -1,7 +1,8 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
+import { COUNTRY_LIST, getRegions, getCities } from '@/lib/locations'
 
 const SUGGESTED_TAGS = ['hiking', 'music', 'food', 'art', 'books', 'gaming', 'travel', 'fitness', 'coffee', 'events', 'science', 'coding', 'photography', 'yoga', 'movies']
 
@@ -12,6 +13,40 @@ export default function NewPostPage() {
   const [customTag, setCustomTag] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+
+  const [country, setCountry] = useState('')
+  const [region, setRegion] = useState('')
+  const [city, setCity] = useState('')
+
+  // Pre-fill location from profile
+  useEffect(() => {
+    async function prefill() {
+      const supabase = createClient()
+      const { data: { user } } = await supabase.auth.getUser()
+      if (!user) return
+      const { data } = await supabase.from('profiles').select('location').eq('id', user.id).single()
+      if (data?.location) {
+        // Try to match "City, Region" or just set as country hint
+        const parts = data.location.split(',').map((s: string) => s.trim())
+        if (parts.length >= 2) {
+          // Guess country from region abbreviation
+          const regionHint = parts[1]
+          const caProvinces: Record<string, string> = {
+            'QC': 'Quebec', 'ON': 'Ontario', 'BC': 'British Columbia', 'AB': 'Alberta',
+            'MB': 'Manitoba', 'SK': 'Saskatchewan', 'NS': 'Nova Scotia', 'NB': 'New Brunswick',
+            'NL': 'Newfoundland and Labrador', 'PE': 'Prince Edward Island',
+            'NT': 'Northwest Territories', 'NU': 'Nunavut', 'YT': 'Yukon',
+          }
+          if (caProvinces[regionHint]) {
+            setCountry('Canada')
+            setRegion(caProvinces[regionHint])
+            setCity(parts[0])
+          }
+        }
+      }
+    }
+    prefill()
+  }, [])
 
   function toggleTag(tag: string) {
     setTags(prev => prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag])
@@ -30,25 +65,41 @@ export default function NewPostPage() {
     const supabase = createClient()
     const { data: { user } } = await supabase.auth.getUser()
 
-    if (!user) {
-      router.push('/login')
-      return
-    }
+    if (!user) { router.push('/login'); return }
 
     const { error } = await supabase.from('posts').insert({
       author_id: user.id,
       content: content.trim(),
       tags,
+      post_country: country || null,
+      post_region: region || null,
+      post_city: city || null,
     })
 
     if (error) { setError(error.message); setLoading(false) }
     else router.push('/')
   }
 
+  const regions = getRegions(country)
+  const cities = getCities(country, region)
+
+  const selectStyle = {
+    border: '1px solid var(--border)',
+    background: 'var(--background)',
+    borderRadius: '0.75rem',
+    padding: '0.5rem 0.75rem',
+    fontSize: '0.875rem',
+    outline: 'none',
+    width: '100%',
+    color: 'var(--foreground)',
+  }
+
   return (
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-6">Share something 🌻</h1>
       <div className="card p-6 flex flex-col gap-5">
+
+        {/* Content */}
         <div>
           <label className="block text-sm font-medium mb-2">What's on your mind?</label>
           <textarea
@@ -64,6 +115,26 @@ export default function NewPostPage() {
           </p>
         </div>
 
+        {/* Location */}
+        <div>
+          <label className="block text-sm font-medium mb-2">Location <span style={{ color: '#9ca3af', fontWeight: 400 }}>(optional)</span></label>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            <select value={country} onChange={e => { setCountry(e.target.value); setRegion(''); setCity('') }} style={selectStyle}>
+              <option value="">Country</option>
+              {COUNTRY_LIST.map(c => <option key={c} value={c}>{c}</option>)}
+            </select>
+            <select value={region} onChange={e => { setRegion(e.target.value); setCity('') }} disabled={!country} style={selectStyle}>
+              <option value="">State / Province</option>
+              {regions.map(r => <option key={r} value={r}>{r}</option>)}
+            </select>
+            <select value={city} onChange={e => setCity(e.target.value)} disabled={!region} style={selectStyle}>
+              <option value="">City</option>
+              {cities.map(c => <option key={c} value={c}>{c}</option>)}
+            </select>
+          </div>
+        </div>
+
+        {/* Tags */}
         <div>
           <label className="block text-sm font-medium mb-2">Add tags</label>
           <div className="flex flex-wrap gap-2 mb-3">
