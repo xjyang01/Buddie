@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { LocaleProvider } from "@/lib/locale-context";
 
