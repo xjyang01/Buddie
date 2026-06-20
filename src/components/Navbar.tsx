@@ -6,14 +6,10 @@ import { useState } from "react";
 
 const links = [
   { href: "/science", icon: FlaskConical, label: "Science & Tech" },
-  { href: "/health", icon: HeartPulse, label: "Health" },
-  { href: "/education", icon: GraduationCap, label: "Education" },
-  { href: "/jobs", icon: Briefcase, label: "Jobs" },
   { href: "/money", icon: DollarSign, label: "Money" },
-  { href: "/entertainment", icon: Clapperboard, label: "Entertainment" },
-  { href: "/travel", icon: Plane, label: "Travel" },
+  { href: "/jobs", icon: Briefcase, label: "Jobs" },
+  { href: "/health", icon: HeartPulse, label: "Health" },
   { href: "/people", icon: Snowflake, label: "People" },
-  { href: "/donation", icon: MessageCircle, label: "Donate to Research" },
   { href: "/profile", icon: User, label: "Profile" },
 ];
 
@@ -75,7 +71,7 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className="flex items-center gap-1.5 px-2.5 py-2 rounded-xl text-sm font-medium transition-all"
+                className="flex items-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-medium transition-all"
                 style={{
                   background: active ? "var(--primary-light)" : "transparent",
                   color: active ? "var(--primary)" : "var(--foreground)",
