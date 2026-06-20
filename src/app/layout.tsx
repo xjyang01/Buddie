@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Analytics } from "@vercel/analytics/react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { LocaleProvider } from "@/lib/locale-context";
 
@@ -43,7 +42,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <LanguageSwitcher />
           </footer>
         </LocaleProvider>
-        <Analytics />
       </body>
     </html>
   );
