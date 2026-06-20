@@ -1,8 +1,9 @@
-export type Locale = 'en' | 'fr' | 'zh'
+export type Locale = 'en' | 'fr' | 'es' | 'zh'
 
 export const LOCALES: { code: Locale; label: string; flag: string }[] = [
   { code: 'en', label: 'English', flag: '🇨🇦' },
   { code: 'fr', label: 'Français', flag: '🇫🇷' },
+  { code: 'es', label: 'Español', flag: '🇪🇸' },
   { code: 'zh', label: '中文', flag: '🇨🇳' },
 ]
 
@@ -164,6 +165,82 @@ export const translations: Record<Locale, Record<string, string>> = {
 
     'follow.follow': 'Suivre',
     'follow.following': 'Abonné',
+  },
+
+  es: {
+    'nav.science': 'Ciencia y Tec.',
+    'nav.money': 'Finanzas',
+    'nav.jobs': 'Empleos',
+    'nav.health': 'Salud',
+    'nav.people': 'Personas',
+    'nav.profile': 'Perfil',
+    'nav.post': 'Publicar',
+    'nav.search': 'Buscar...',
+    'nav.signout': 'Cerrar sesión',
+
+    'home.tagline': '¡Encuentra Buddies, Encuentra la Vida! 🌻',
+    'home.subtitle': 'Esperamos que Buddie te haga más inteligente, exitoso y feliz.',
+    'home.join': 'Unirse a Buddie',
+    'home.share': 'Comparte algo',
+    'home.feed': 'Feed de la comunidad',
+    'home.news': 'Últimas noticias',
+    'home.see_all': 'Ver todo →',
+    'home.contact': 'Contactar al webmaster',
+
+    'auth.signup': 'Únete a Buddie 🌻',
+    'auth.signup.sub': 'Crea una cuenta gratis — cualquier correo es bienvenido',
+    'auth.login': 'Iniciar sesión',
+    'auth.login.sub': 'Bienvenido de vuelta a Buddie',
+    'auth.name': 'Nombre completo',
+    'auth.email': 'Correo electrónico',
+    'auth.password': 'Contraseña',
+    'auth.create': 'Crear cuenta',
+    'auth.signin': 'Iniciar sesión',
+    'auth.have_account': '¿Ya tienes cuenta?',
+    'auth.no_account': '¿Sin cuenta?',
+    'auth.check_email': 'Revisa tu correo',
+    'auth.check_email.sub': 'Enviamos un enlace de verificación a',
+    'auth.verified_note': '¿Quieres publicar empleos o CVs?',
+    'auth.get_verified': 'Verificarte',
+    'auth.after_signup': 'después de registrarte.',
+
+    'profile.edit': 'Editar perfil',
+    'profile.save': 'Guardar perfil',
+    'profile.saving': 'Guardando...',
+    'profile.saved': 'Guardado ✓',
+    'profile.cancel': 'Cancelar',
+    'profile.bio': 'Biografía',
+    'profile.bio.placeholder': 'Cuéntale a la comunidad sobre ti...',
+    'profile.location': 'Ubicación',
+    'profile.location.placeholder': 'ej. Montreal, QC',
+    'profile.avatar': 'Avatar',
+    'profile.interests': 'Intereses',
+    'profile.following': 'siguiendo',
+    'profile.followers': 'seguidores',
+    'profile.posts': 'publicaciones',
+    'profile.your_posts': 'Tus publicaciones',
+    'profile.new_post': '+ Nueva publicación',
+    'profile.no_posts': 'Sin publicaciones aún. ¡Comparte algo!',
+    'profile.first_post': 'Escribe tu primera publicación →',
+    'profile.verified': '✓ Verificado',
+
+    'post.title': 'Comparte algo 🌻',
+    'post.placeholder': 'Buscar compañeros de senderismo, crear un club de lectura, organizar una cena...',
+    'post.tags': 'Agregar etiquetas',
+    'post.custom_tag': 'Etiqueta personalizada...',
+    'post.add': 'Agregar',
+    'post.submit': 'Publicar en Buddie 🌻',
+    'post.posting': 'Publicando...',
+
+    'jobs.title': 'Empleos 💼',
+    'jobs.sub': 'Oportunidades publicadas por empleadores verificados',
+    'jobs.post': '+ Publicar empleo',
+    'jobs.apply': 'Aplicar',
+    'jobs.empty': 'Sin ofertas de empleo aún',
+    'jobs.empty.sub': 'Sé el primer empleador verificado en publicar en Buddie',
+
+    'follow.follow': 'Seguir',
+    'follow.following': 'Siguiendo',
   },
 
   zh: {

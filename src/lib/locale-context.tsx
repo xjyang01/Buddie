@@ -19,7 +19,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const saved = localStorage.getItem('buddie_locale') as Locale | null
-    if (saved && ['en', 'fr', 'zh'].includes(saved)) setLocaleState(saved)
+    if (saved && ['en', 'fr', 'es', 'zh'].includes(saved)) setLocaleState(saved)
   }, [])
 
   function setLocale(l: Locale) {
