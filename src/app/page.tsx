@@ -1,3 +1,5 @@
+export const revalidate = 60
+
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import { MONEY_NEWS } from '@/lib/money'
@@ -19,7 +21,7 @@ export default async function Home() {
 
   const { data: posts } = await supabase
     .from('posts')
-    .select('*, profiles(full_name, avatar), likes(count), comments(count)')
+    .select('*, profiles(full_name, avatar)')
     .order('created_at', { ascending: false })
     .limit(10)
 
