@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Analytics } from "@vercel/analytics/next";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { LocaleProvider } from "@/lib/locale-context";
 
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
@@ -31,10 +34,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${geist.variable} antialiased`}>
       <body className="min-h-screen" style={{ background: "var(--background)" }}>
-        <Navbar />
-        <main className="max-w-5xl mx-auto px-4 pt-20 pb-12">
-          {children}
-        </main>
+        <LocaleProvider>
+          <Navbar />
+          <main className="max-w-5xl mx-auto px-4 pt-20 pb-12">
+            {children}
+          </main>
+          <footer className="max-w-5xl mx-auto px-4 pb-6 flex justify-end">
+            <LanguageSwitcher />
+          </footer>
+        </LocaleProvider>
+        <Analytics />
       </body>
     </html>
   );

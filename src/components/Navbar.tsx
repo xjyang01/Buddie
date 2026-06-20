@@ -4,14 +4,15 @@ import { usePathname, useRouter } from "next/navigation";
 import { User, Plus, Search, Snowflake, Briefcase, FlaskConical, HeartPulse, DollarSign, LogOut } from "lucide-react";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
+import { useLocale } from "@/lib/locale-context";
 
-const links = [
-  { href: "/science", icon: FlaskConical, label: "Science & Tech" },
-  { href: "/money", icon: DollarSign, label: "Money" },
-  { href: "/jobs", icon: Briefcase, label: "Jobs" },
-  { href: "/health", icon: HeartPulse, label: "Health" },
-  { href: "/people", icon: Snowflake, label: "People" },
-  { href: "/profile", icon: User, label: "Profile" },
+const NAV_LINKS = [
+  { href: "/science", icon: FlaskConical, key: "nav.science" },
+  { href: "/money", icon: DollarSign, key: "nav.money" },
+  { href: "/jobs", icon: Briefcase, key: "nav.jobs" },
+  { href: "/health", icon: HeartPulse, key: "nav.health" },
+  { href: "/people", icon: Snowflake, key: "nav.people" },
+  { href: "/profile", icon: User, key: "nav.profile" },
 ];
 
 export default function Navbar() {
@@ -19,6 +20,8 @@ export default function Navbar() {
   const router = useRouter();
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const { t } = useLocale();
+  const links = NAV_LINKS.map(l => ({ ...l, label: t(l.key) }));
 
   async function handleLogout() {
     const supabase = createClient();
@@ -55,7 +58,7 @@ export default function Navbar() {
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search..."
+              placeholder={t('nav.search')}
               className="w-full pl-9 pr-4 py-2 rounded-xl text-sm outline-none"
               style={{ border: "1px solid var(--border)", background: "var(--background)" }}
             />
@@ -100,7 +103,7 @@ export default function Navbar() {
           style={{ background: "var(--primary)" }}
         >
           <Plus size={16} />
-          <span className="hidden sm:inline">Post</span>
+          <span className="hidden sm:inline">{t('nav.post')}</span>
         </Link>
 
         {/* Logout */}
