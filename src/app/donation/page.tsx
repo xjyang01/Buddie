@@ -111,7 +111,7 @@ export default function DonationPage() {
           className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white transition hover:opacity-90"
           style={{ background: "var(--primary)" }}
         >
-          <Mail size={16} /> Contact Xiang-Jiao Yang
+          <Mail size={16} /> Contact Us
         </a>
       </div>
 
