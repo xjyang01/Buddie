@@ -19,6 +19,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.post': 'Post',
     'nav.search': 'Search...',
     'nav.signout': 'Sign out',
+    'nav.donate': 'Donate',
 
     // Home
     'home.tagline': 'Find Buddie, Find Life! 🌻',
@@ -101,6 +102,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.post': 'Publier',
     'nav.search': 'Rechercher...',
     'nav.signout': 'Se déconnecter',
+    'nav.donate': 'Donner',
 
     'home.tagline': 'Trouvez des Buddies, Trouvez la Vie! 🌻',
     'home.subtitle': 'Avec Buddie, devenez plus intelligent, plus heureux et plus épanoui.',
@@ -177,6 +179,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.post': 'Publicar',
     'nav.search': 'Buscar...',
     'nav.signout': 'Cerrar sesión',
+    'nav.donate': 'Donar',
 
     'home.tagline': '¡Encuentra Buddies, Encuentra la Vida! 🌻',
     'home.subtitle': 'Esperamos que Buddie te haga más inteligente, exitoso y feliz.',
@@ -253,6 +256,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.post': '发布',
     'nav.search': '搜索...',
     'nav.signout': '退出登录',
+    'nav.donate': '捐款',
 
     'home.tagline': '找到伙伴，找到生活！🌻',
     'home.subtitle': '希望 Buddie 能让你更聪明、更成功、更快乐。',

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { User, Plus, Search, Snowflake, Briefcase, FlaskConical, HeartPulse, DollarSign, LogOut } from "lucide-react";
+import { User, Plus, Search, Snowflake, Briefcase, FlaskConical, HeartPulse, DollarSign, LogOut, Heart } from "lucide-react";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { useLocale } from "@/lib/locale-context";
@@ -13,6 +13,7 @@ const NAV_LINKS = [
   { href: "/health", icon: HeartPulse, key: "nav.health" },
   { href: "/people", icon: Snowflake, key: "nav.people" },
   { href: "/profile", icon: User, key: "nav.profile" },
+  { href: "/donation", icon: Heart, key: "nav.donate" },
 ];
 
 export default function Navbar() {

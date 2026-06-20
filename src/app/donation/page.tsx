@@ -36,12 +36,12 @@ export default function DonationPage() {
               reputable organizations working on the front lines of disease research.
             </p>
             <a
-              href="mailto:xiang-jiao.yang@mcgill.ca"
+              href="mailto:etom@buddiespace.app"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white transition hover:opacity-90"
               style={{ background: "var(--primary)" }}
             >
               <Mail size={16} />
-              xiang-jiao.yang@mcgill.ca
+              etom@buddiespace.app
             </a>
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function DonationPage() {
           Questions or ready to donate? Reach out and we'll guide you through the process.
         </p>
         <a
-          href="mailto:xiang-jiao.yang@mcgill.ca"
+          href="mailto:etom@buddiespace.app"
           className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white transition hover:opacity-90"
           style={{ background: "var(--primary)" }}
         >
