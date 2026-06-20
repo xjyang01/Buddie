@@ -207,8 +207,8 @@ export default async function Home() {
       <div className="card p-6 text-center text-sm" style={{ color: '#6b7280' }}>
         <p className="font-semibold mb-1" style={{ color: 'var(--foreground)' }}>Contact the Webmaster</p>
         <p>Xiang-Jiao Yang —{' '}
-          <a href="mailto:xiang-jiao.yang@mcgill.ca" className="hover:underline" style={{ color: 'var(--primary)' }}>
-            xiang-jiao.yang@mcgill.ca
+          <a href="mailto:etom@buddiespace.app" className="hover:underline" style={{ color: 'var(--primary)' }}>
+            etom@buddiespace.app
           </a>
         </p>
       </div>
