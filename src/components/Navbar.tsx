@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { User, Plus, MessageCircle, Search, Snowflake, Briefcase, FlaskConical, HeartPulse, Clapperboard, Plane, DollarSign, GraduationCap } from "lucide-react";
+import { User, Plus, Search, Snowflake, Briefcase, FlaskConical, HeartPulse, DollarSign, LogOut } from "lucide-react";
 import { useState } from "react";
+import { createClient } from "@/lib/supabase/client";
 
 const links = [
   { href: "/science", icon: FlaskConical, label: "Science & Tech" },
@@ -18,6 +19,13 @@ export default function Navbar() {
   const router = useRouter();
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
+
+  async function handleLogout() {
+    const supabase = createClient();
+    await supabase.auth.signOut();
+    router.push('/');
+    router.refresh();
+  }
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -94,6 +102,13 @@ export default function Navbar() {
           <Plus size={16} />
           <span className="hidden sm:inline">Post</span>
         </Link>
+
+        {/* Logout */}
+        <button onClick={handleLogout} title="Sign out"
+          className="p-2 rounded-xl ml-1 hover:opacity-70 transition"
+          style={{ color: '#9ca3af' }}>
+          <LogOut size={17} />
+        </button>
       </nav>
 
       {/* Mobile search bar (slides in) */}
