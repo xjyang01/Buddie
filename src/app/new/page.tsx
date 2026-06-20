@@ -165,6 +165,10 @@ export default function NewPostPage() {
           </div>
         </div>
 
+        <p className="text-xs rounded-xl px-4 py-3" style={{ background: '#fef9c3', color: '#854d0e' }}>
+          ⚠️ All posts must comply with applicable laws and regulations. Content that is unlawful, defamatory, harassing, or violates others&apos; rights will be removed.
+        </p>
+
         {error && <p className="text-sm" style={{ color: '#ef4444' }}>{error}</p>}
 
         <div className="flex gap-3 pt-2">
