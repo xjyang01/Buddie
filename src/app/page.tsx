@@ -8,13 +8,13 @@ import TagPill from '@/components/TagPill'
 
 const HOME_NEWS = [
   MONEY_NEWS.find((n) => n.id === 'spacex-cursor')!,
+  MONEY_NEWS.find((n) => n.id === 'china-housing')!,
   MONEY_NEWS.find((n) => n.id === 'abridge-nvidia')!,
   MONEY_NEWS.find((n) => n.id === 'spacex-ipo')!,
   MONEY_NEWS.find((n) => n.id === 'openai-ipo')!,
   MONEY_NEWS.find((n) => n.id === 'anthropic-ipo')!,
   MONEY_NEWS.find((n) => n.id === 'deepseek-funding')!,
   MONEY_NEWS.find((n) => n.id === 'li-ka-shing-autobiography')!,
-  MONEY_NEWS.find((n) => n.id === 'china-housing')!,
 ]
 
 type Post = {

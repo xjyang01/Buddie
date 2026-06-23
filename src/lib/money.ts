@@ -34,6 +34,27 @@ export const MONEY_NEWS: NewsItem[] = [
     ],
   },
   {
+    id: "china-housing",
+    emoji: "🏠",
+    category: "Real Estate",
+    title: "China's Housing Market: From Boom to Reset",
+    summary:
+      "After two decades of relentless growth, China's residential property market is undergoing a painful correction — and some economists are drawing uncomfortable parallels to Japan's lost decades.",
+    date: "June 23, 2026",
+    readTime: "5 min read",
+    body: [
+      "After two decades of relentless growth, China's residential property market is undergoing a painful correction. Home prices in major cities have fallen 20–30% from their 2021 peaks, and developers like Evergrande and Country Garden — once symbols of China's urban boom — have defaulted on hundreds of billions in debt.",
+
+      "The crisis traces back to Beijing's 'three red lines' policy (2020), which capped developer borrowing ratios to deflate a debt bubble. The move worked — but triggered a confidence collapse. Buyers stopped purchasing unfinished units, developers ran out of cash to complete projects, and a vicious cycle set in.",
+
+      "The government has since reversed course: cutting mortgage rates, relaxing purchase restrictions in major cities, and setting up a state fund to buy unsold inventory. Stabilization is beginning in tier-1 cities like Shanghai and Beijing, but smaller cities with chronic oversupply remain under pressure.",
+
+      "For ordinary Chinese families — who hold 70–80% of their wealth in real estate — the downturn is not just an economic story. It is reshaping consumer confidence, household savings behaviour, and China's long-term growth model.",
+
+      "On Chinese social media such as WeChat, a growing chorus of voices — including some economists — are drawing comparisons to Japan's property collapse of the early 1990s, which ushered in three 'lost decades' of stagnation. Whether China can avoid a similar fate remains one of the most debated questions in global economics today.",
+    ],
+  },
+  {
     id: "spacex-cursor",
     emoji: "🛸",
     category: "Acquisition",
@@ -204,27 +225,6 @@ export const MONEY_NEWS: NewsItem[] = [
       "Competition is intensifying. Google's Gemini, Anthropic's Claude, Meta's LLaMA, and a wave of open-source models are all competing for the same enterprise and consumer markets. OpenAI's first-mover advantage remains strong, but maintaining it will require continuous and costly model development.",
 
       "For prospective investors, the IPO presents a rare opportunity to own a stake in the company widely credited with igniting the modern AI era. But the risks — regulatory uncertainty, governance history, and the economics of frontier AI — are equally significant. As with any high-profile tech IPO, due diligence will be essential.",
-    ],
-  },
-  {
-    id: "china-housing",
-    emoji: "🏠",
-    category: "Real Estate",
-    title: "China's Housing Market: From Boom to Reset",
-    summary:
-      "After two decades of relentless growth, China's residential property market is undergoing a painful correction — and some economists are drawing uncomfortable parallels to Japan's lost decades.",
-    date: "June 23, 2026",
-    readTime: "5 min read",
-    body: [
-      "After two decades of relentless growth, China's residential property market is undergoing a painful correction. Home prices in major cities have fallen 20–30% from their 2021 peaks, and developers like Evergrande and Country Garden — once symbols of China's urban boom — have defaulted on hundreds of billions in debt.",
-
-      "The crisis traces back to Beijing's 'three red lines' policy (2020), which capped developer borrowing ratios to deflate a debt bubble. The move worked — but triggered a confidence collapse. Buyers stopped purchasing unfinished units, developers ran out of cash to complete projects, and a vicious cycle set in.",
-
-      "The government has since reversed course: cutting mortgage rates, relaxing purchase restrictions in major cities, and setting up a state fund to buy unsold inventory. Stabilization is beginning in tier-1 cities like Shanghai and Beijing, but smaller cities with chronic oversupply remain under pressure.",
-
-      "For ordinary Chinese families — who hold 70–80% of their wealth in real estate — the downturn is not just an economic story. It is reshaping consumer confidence, household savings behaviour, and China's long-term growth model.",
-
-      "On Chinese social media such as WeChat, a growing chorus of voices — including some economists — are drawing comparisons to Japan's property collapse of the early 1990s, which ushered in three 'lost decades' of stagnation. Whether China can avoid a similar fate remains one of the most debated questions in global economics today.",
     ],
   },
 ];
