@@ -14,6 +14,7 @@ const HOME_NEWS = [
   MONEY_NEWS.find((n) => n.id === 'anthropic-ipo')!,
   MONEY_NEWS.find((n) => n.id === 'deepseek-funding')!,
   MONEY_NEWS.find((n) => n.id === 'li-ka-shing-autobiography')!,
+  MONEY_NEWS.find((n) => n.id === 'china-housing')!,
 ]
 
 type Post = {

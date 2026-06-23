@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import { COUNTRY_LIST, getRegions, getCities } from '@/lib/locations'
 
@@ -8,8 +8,12 @@ const SUGGESTED_TAGS = ['hiking', 'music', 'food', 'art', 'books', 'gaming', 'tr
 
 export default function NewPostPage() {
   const router = useRouter()
+  const searchParams = useSearchParams()
   const [content, setContent] = useState('')
-  const [tags, setTags] = useState<string[]>([])
+  const [tags, setTags] = useState<string[]>(() => {
+    const tag = searchParams.get('tag')
+    return tag ? [tag] : []
+  })
   const [customTag, setCustomTag] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
