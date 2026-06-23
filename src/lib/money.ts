@@ -11,6 +11,29 @@ export type NewsItem = {
 
 export const MONEY_NEWS: NewsItem[] = [
   {
+    id: "tech-sell-off-june-2026",
+    emoji: "📉",
+    category: "Markets",
+    title: "Global Tech Sell-Off Deepens as AI and Chip Stocks Tumble",
+    summary:
+      "Technology stocks fell sharply for a second consecutive day on June 23, 2026, as a global sell-off in artificial-intelligence and semiconductor shares rattled markets from Seoul to New York. The Nasdaq 100 plunged more than 3%, dragged down by steep losses in Micron, Nvidia, and Taiwan Semiconductor, amid doubts about lofty AI valuations and fears that war-driven inflation could keep interest rates elevated.",
+    date: "June 23, 2026",
+    readTime: "4 min read",
+    body: [
+      "U.S. equities extended their slide on June 23, 2026, as the technology-heavy Nasdaq 100 fell more than 3.2% and the broader Nasdaq Composite dropped 2.2%. The benchmark S&P 500 closed 1.4% lower, while the small-cap Russell 2000 declined nearly 1%. The losses followed a 2% drop in the Nasdaq the prior session, marking one of the most pronounced two-day retreats in technology shares of the year and signaling a broad reassessment of the sector that has powered markets higher.",
+
+      "Semiconductor stocks bore the brunt of the decline. Memory-chip maker Micron Technology sank 11.4%, while Taiwan Semiconductor Manufacturing Company (TSMC) fell 5.2% and AI-chip leader Nvidia dropped 3.2%. The rout began overnight in Asia, where two of South Korea's largest companies led declines that sent the Kospi index down more than 9%, triggering a temporary trading halt. The concentration of losses in chipmakers underscored how central the semiconductor industry has become to the AI investment narrative — and how exposed it is when that narrative is questioned.",
+
+      "Two forces converged to spark the sell-off. The first was growing skepticism about the sustainability of the extraordinary gains in technology shares, with investors increasingly questioning whether AI-related earnings can justify current valuations. The second was macroeconomic: fears that rising inflation, stemming from the ongoing Iran war and the closure of the Strait of Hormuz, could force central banks to keep interest rates higher for longer. Elevated borrowing costs pose a particular threat to the capital-intensive, ever-expanding global AI infrastructure buildout, which depends on cheap financing.",
+
+      "Market sentiment was further dented by SpaceX, whose shares have slid for days following a volatile June 12 market debut. The weakness in one of the year's most closely watched listings added to the sense that investors were growing more discriminating about richly valued technology names after a prolonged period of near-uninterrupted gains.",
+
+      "The sell-off was global in scope. Beyond the dramatic decline in South Korea's Kospi, European markets also closed in the red, with the pan-European Stoxx 600 down 0.8% and Germany's flagship DAX index falling 1%. The synchronized weakness across continents reflected the deeply interconnected nature of the technology supply chain and the shared exposure of global investors to the AI trade.",
+
+      "Whether the pullback represents a healthy correction or the start of a more sustained repricing of technology assets will depend in part on the trajectory of inflation, interest-rate expectations, and the next round of corporate earnings. For now, the episode is a reminder that the AI-driven rally — for all its momentum — remains vulnerable to shifts in the macroeconomic backdrop and to the simple question of whether sky-high valuations can be justified.",
+    ],
+  },
+  {
     id: "spacex-cursor",
     emoji: "🛸",
     category: "Acquisition",
