@@ -64,7 +64,7 @@ Researchers are now investigating how to train MoE models more stably, route tok
 
 // Pull Anthropic + OpenAI IPO articles from the shared Money data
 const AI_INDUSTRY_NEWS = MONEY_NEWS.filter((n) =>
-  ["spacex-cursor", "abridge-nvidia", "deepseek-funding", "anthropic-ipo", "openai-ipo"].includes(n.id)
+  ["fugu-user-reactions", "spacex-cursor", "abridge-nvidia", "deepseek-funding", "anthropic-ipo", "openai-ipo"].includes(n.id)
 );
 
 export default function AIPage() {

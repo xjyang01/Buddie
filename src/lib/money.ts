@@ -11,6 +11,25 @@ export type NewsItem = {
 
 export const MONEY_NEWS: NewsItem[] = [
   {
+    id: "fugu-user-reactions",
+    emoji: "🐡",
+    category: "AI",
+    title: "Fugu Faces Early Scrutiny: Users Report Slow Speeds and Heavy Token Use",
+    summary:
+      "Following Sakana AI's claim that its Fugu orchestration system rivals Claude Fable 5, users around the world have been putting the agent through its paces. Early feedback is mixed: while the multi-model approach intrigues testers, several report that Fugu is noticeably slower and consumes tokens faster than rival agents such as Claude Code and Codex — with at least one user hitting a usage limit barely an hour into a paid subscription.",
+    date: "June 24, 2026",
+    readTime: "3 min read",
+    body: [
+      "Since Sakana AI released Fugu on June 22, 2026, users around the world have been active in testing and evaluating the agent in light of the company's claim that it performs on parity with Claude Fable 5. The promise of a system that orchestrates multiple frontier models — routing sub-tasks to the likes of GPT-5, Gemini 3.1 Pro, and Claude Opus 4.8 behind a single API — has drawn considerable curiosity from the developer community.",
+
+      "The early verdict, however, is mixed. Some users have complained that the agent is slow and burns through tokens faster than other agents such as Claude Code and Codex. The very design that makes Fugu distinctive — coordinating several models and assembling their outputs into one answer — appears to come at a cost in both latency and token consumption, as work is parceled out and stitched back together rather than handled by a single model in one pass.",
+
+      "Cost has emerged as a particular sticking point. One user reported that, on a $20-per-month subscription, he began using Fugu only to be told, after a bit over one hour, to come back in a few hours because he had reached his usage limit. For developers accustomed to longer uninterrupted sessions on competing tools, such early cut-offs raise questions about how Fugu's orchestration overhead translates into real-world usability and value.",
+
+      "Whether these are teething problems of a newly launched product or a more fundamental tradeoff inherent to multi-agent orchestration remains to be seen. For now, Fugu's benchmark claims have earned it attention — but turning that attention into sustained adoption may depend on how quickly Sakana AI can address the speed and cost concerns surfacing in real use.",
+    ],
+  },
+  {
     id: "tech-sell-off-june-2026",
     emoji: "📉",
     category: "Markets",
