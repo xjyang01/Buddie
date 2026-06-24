@@ -8,6 +8,7 @@ import TagPill from '@/components/TagPill'
 
 const HOME_NEWS = [
   MONEY_NEWS.find((n) => n.id === 'fugu-user-reactions')!,
+  MONEY_NEWS.find((n) => n.id === 'fugu-launch')!,
   MONEY_NEWS.find((n) => n.id === 'spacex-cursor')!,
   MONEY_NEWS.find((n) => n.id === 'china-housing')!,
   MONEY_NEWS.find((n) => n.id === 'abridge-nvidia')!,

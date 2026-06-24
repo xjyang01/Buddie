@@ -13,21 +13,6 @@ type NewsReport = {
 
 const REPORTS: NewsReport[] = [
   {
-    id: "fugu",
-    headline: "Japan's Sakana AI Unveils Fugu, a Multi-Agent System That Orchestrates Rival Frontier Models",
-    source: "Sakana AI", date: "Jun 2026",
-    tags: ["multi-agent", "orchestration", "Sakana AI", "LLM", "Japan"],
-    report: `On June 22, 2026, Tokyo-based Sakana AI released Fugu, a multi-agent orchestration system that coordinates multiple frontier large language models behind a single, OpenAI-compatible API. Rather than competing to build the single most powerful model, Sakana AI is selling the layer that coordinates them — turning orchestration from a developer's engineering problem into a turnkey product.
-
-At Fugu's core is a 7-billion-parameter model trained via reinforcement learning, dubbed the "RL Conductor." Notably, this small model does not generate the final answer itself. Instead, it acts as a foreman: when a user submits a task, the RL Conductor dynamically analyzes the task type and delegates sub-tasks to the most suitable specialists in its agent pool — top-tier models such as GPT-5, Gemini 3.1 Pro, and Claude Opus 4.8 — before assembling their contributions into a single coherent response.
-
-Sakana AI reports that Fugu surpasses GPT-5.5 and Claude Opus 4.8 on SWE-Bench Pro and TerminalBench, two demanding benchmarks for software engineering and command-line agentic tasks, and claims the system rivals Anthropic's Fable and Mythos models. If borne out by independent evaluation, the results suggest that intelligent orchestration of existing models can rival, and in some cases exceed, the performance of any single frontier system.
-
-The approach carries a strategic dimension. By coordinating rather than replacing the major labs' models, Fugu offers customers a hedge against vendor lock-in: workloads can be routed across providers, and the system can adapt as the relative strengths of individual models shift. For enterprises wary of betting on a single AI supplier, this orchestration layer is an appealing proposition.
-
-Sakana AI was founded in Tokyo in 2023 by Llion Jones — a co-author of the seminal "Attention Is All You Need" Transformer paper — and former Google researcher David Ha. Now valued at over $2.5 billion, it is Japan's most valuable unlisted AI unicorn, and Fugu represents its most ambitious bid yet to carve out a distinctive position in a market dominated by U.S. labs racing to build ever-larger standalone models.`,
-  },
-  {
     id: "ai1",
     headline: "OpenAI's o3 Scores 87.5% on ARC-AGI, Approaching Human-Level Abstract Reasoning",
     source: "ARC Prize Foundation", date: "Dec 2024",
@@ -64,7 +49,7 @@ Researchers are now investigating how to train MoE models more stably, route tok
 
 // Pull Anthropic + OpenAI IPO articles from the shared Money data
 const AI_INDUSTRY_NEWS = MONEY_NEWS.filter((n) =>
-  ["fugu-user-reactions", "spacex-cursor", "abridge-nvidia", "deepseek-funding", "anthropic-ipo", "openai-ipo"].includes(n.id)
+  ["fugu-user-reactions", "fugu-launch", "spacex-cursor", "abridge-nvidia", "deepseek-funding", "anthropic-ipo", "openai-ipo"].includes(n.id)
 );
 
 export default function AIPage() {
